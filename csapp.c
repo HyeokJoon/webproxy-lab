@@ -23,6 +23,7 @@
  */
 /* $begin csapp.c */
 #include "csapp.h"
+#include <netdb.h>
 
 /************************** 
  * Error-handling functions
@@ -151,7 +152,8 @@ pid_t Getpgrp(void) {
 /* $begin sigaction */
 handler_t *Signal(int signum, handler_t *handler) 
 {
-    struct sigaction action, old_action;
+    struct sigaction action;
+    struct sigaction old_action;
 
     action.sa_handler = handler;  
     sigemptyset(&action.sa_mask); /* Block sigs of type being handled */

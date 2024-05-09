@@ -5,6 +5,7 @@
 #ifndef __CSAPP_H__
 #define __CSAPP_H__
 
+#include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
@@ -18,7 +19,6 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
-#include <fcntl.h>
 #include <sys/mman.h>
 #include <errno.h>
 #include <math.h>
@@ -32,7 +32,7 @@
 /* Default file permissions are DEF_MODE & ~DEF_UMASK */
 /* $begin createmasks */
 #define DEF_MODE   S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP|S_IROTH|S_IWOTH
-#define DEF_UMASK  S_IWGRP|S_IWOTH
+#define DEF_UMASK  S_IWGRP|S_IWOTH 
 /* $end createmasks */
 
 /* Simplifies calls to bind(), connect(), and accept() */
@@ -49,6 +49,15 @@ typedef struct {
     char *rio_bufptr;          /* Next unread byte in internal buf */
     char rio_buf[RIO_BUFSIZE]; /* Internal buffer */
 } rio_t;
+
+struct addrinfo{
+    int ai_flags;
+    int ai_family;
+    int ai_socktype;
+    // int ai_protocol;
+    // char *ai_canonname;
+};
+
 /* $end rio_t */
 
 /* External variables */

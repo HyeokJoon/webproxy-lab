@@ -1,0 +1,20 @@
+{
+    "files.associations": {
+        "*.c": "c",
+        "csapp.h": "c",
+        "socket.h": "c",
+        "errno.h": "c",
+        "stdlib.h": "c",
+        "signal.h": "c",
+        "sigset_t.h": "c",
+        "sigaction.h": "c",
+        "stdio.h": "c",
+        "semaphore.h": "c",
+        "netdb.h": "c",
+        "time.h": "c",
+        "in.h": "c",
+        "unistd.h": "c",
+        "strings.h": "c",
+        "sig_atomic_t.h": "c"
+    }
+}

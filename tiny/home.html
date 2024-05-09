@@ -1,7 +1,23 @@
 <html>
-<head><title>test</title></head>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./godzilla.jpg">
+    <title>test</title></head>
 <body> 
 <img align="middle" src="godzilla.gif">
+<video align= "middle" src="JungleLife.mp4" muted autoplay type="video/mp4" width="400" height="600" loop></video>
 Dave O'Hallaron
+
+<div style="width: 800px; margin:auto; display: flex; align-items: center; flex-direction: column;">
+    <h2>더할 숫자를 입력하고 결과보기를 누르세요</h2>
+    <form action="cgi-bin/adder" method="get">
+        <div>
+            <input name="first" type="text"> +
+            <input name="second" type="text">
+        </div>
+        <p><button type="submit" style="margin: auto;"> 결과보기 </button></p>
+    </form>
+</div>
+
 </body>
 </html>
